@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.arduino.michael.arduinotempcontrol.MainActivity">
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:id="@+id/titleLayout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Temperature and Humidity Control"
+            android:textColor="#000000"
+            android:typeface="monospace"
+            android:gravity="center"
+            android:id="@+id/titleTextView" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        android:id="@+id/networkLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ip:"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:layout_margin="5dp"
+            android:id="@+id/ipaddressTextView"
+            />
+
+        <EditText
+            android:id="@+id/ipaddressText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_above="@+id/portTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/portTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="port:"
+            android:layout_gravity="left"
+            android:layout_below="@id/ipaddressTextView"
+            android:paddingTop="10dp"
+            android:layout_margin="5dp"
+            android:id="@+id/portTextView"
+            />
+
+        <EditText
+            android:id="@+id/portText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_above="@+id/networkButton"
+            android:layout_toEndOf="@+id/networkButton"
+            android:layout_alignStart="@+id/ipaddressText" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Info"
+            android:id="@+id/networkButton"
+            android:layout_below="@+id/portTextView"
+            android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.2"
+        android:id="@+id/tempLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Temperature: 75"
+            android:gravity="center"
+            android:id="@+id/tempTabTextView" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Temperature"
+            android:id="@+id/getTemperatureButton"
+            android:layout_gravity="center_vertical"
+            android:layout_below="@id/tempTabTextView"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Temperature"
+            android:id="@+id/addTempButton"
+            android:layout_below="@+id/tempTabTextView"
+            android:layout_toEndOf="@+id/getTemperatureButton" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/tempChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/getTemperatureButton" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.2"
+        android:id="@+id/humidLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Humidity: 65"
+            android:gravity="center"
+            android:id="@+id/humidTabTextView"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Humidity"
+            android:id="@+id/getHumidityButton"
+            android:layout_below="@id/humidTabTextView"
+            android:layout_gravity="center_vertical" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Humidity"
+            android:id="@+id/addHumidButton"
+            android:layout_alignTop="@+id/getHumidityButton"
+            android:layout_toEndOf="@+id/getHumidityButton" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/humidChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/getHumidityButton" />
+
+    </RelativeLayout>
+
+</LinearLayout>
