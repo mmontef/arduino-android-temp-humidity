@@ -1,10 +1,12 @@
-package com.arduino.michael.arduinotempcontrol;
+package com.arduino.michael.arduinotempcontrol.data;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.arduino.michael.arduinotempcontrol.model.Humidor;
 
 import java.util.ArrayList;
 
@@ -61,6 +63,8 @@ public class DBHandler extends SQLiteOpenHelper {
         }catch (Exception e){
             return false;
         }
+
+        //have a notifyAllObserves method here? should create it in humidorFragment though
 
     }
 

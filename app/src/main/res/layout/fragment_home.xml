@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.arduino.michael.arduinotempcontrol.activity.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/home_temp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="40dp"
+        android:text="Temperature:"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/home_humid"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="40dp"
+        android:text="Humidity:"
+        android:textStyle="bold"
+        android:layout_below="@+id/home_temp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/home_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="Network:"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_below="@id/home_humid"
+        android:layout_alignParentStart="true"/>
+
+
+
+</RelativeLayout>

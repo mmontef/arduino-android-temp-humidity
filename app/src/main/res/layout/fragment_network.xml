@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.arduino.michael.arduinotempcontrol.activity.NetworkFragment">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/network_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/network_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Network SSID" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/network_input_layout"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/network_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/port_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_input_layout"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/network_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Port Number"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/network_button"
+        android:layout_below="@+id/port_input_layout"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
 
-    <EditText
-        android:id="@+id/tempAdd"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="temperature"
-        android:layout_gravity="center_horizontal" />
+        android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/humid_layout">
 
     <EditText
         android:id="@+id/humidAdd"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:hint="humidity"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal|top"
+       />
 
-    <Button
-        android:layout_width="wrap_content"
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
-        android:id="@+id/saveButton"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/temp_layout"
+        android:layout_below="@id/humid_layout">
 
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/tempAdd"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:id="@+id/cancelButton"
-        android:layout_gravity="center_horizontal" />
+        android:inputType="numberDecimal"
+        android:hint="temperature"
+        android:layout_gravity="center_horizontal|bottom"
+        />
 
-</LinearLayout>
+    </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</FrameLayout >

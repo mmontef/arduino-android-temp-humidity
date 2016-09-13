@@ -1,4 +1,4 @@
-package com.arduino.michael.arduinotempcontrol;
+package com.arduino.michael.arduinotempcontrol.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,6 +26,7 @@ public class Humidor {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String currentDate = df.format(c.getTime());
+        this.currentDate = currentDate;
     }
 
     public int getId() {
